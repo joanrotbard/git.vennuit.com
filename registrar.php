@@ -1,74 +1,93 @@
-﻿<!DOCTYPE html>
+﻿<?php
+	include('menu.php');
+	include('classes/usuario.php');	
+	include('classes/provincia.php');
+	include('classes/localidad.php');	
+	
+	$provincias = Provincia::obtenerProvincias();
+	$localidades = Localidad::obtenerLocalidadPorProvincia(1);
+	if(isset($_POST["Registrate"]))
+	{
+		$nuevoUsuario = new Usuario();
+		$nuevoUsuario->nombre = $_POST["nombre"];
+		$nuevoUsuario->apellido = $_POST["apellido"];
+		$nuevoUsuario->mailusuario = $_POST["mailusuario"];
+		$nuevoUsuario->contraseña = $_POST["contraseña"];
+		$nuevoUsuario->telefono = $_POST["telefono"];
+		$nuevoUsuario->celular = $_POST["celular"];
+		$nuevoUsuario->dni = $_POST["dni"];
+		$nuevoUsuario->provinciaid = $_POST["provincia"];
+		$nuevoUsuario->localidadid = $_POST["localidad"];
+		$nuevoUsuario->calle = $_POST["calle"];
+		$nuevoUsuario->numero = $_POST["numero"];
+		$nuevoUsuario->departamento = $_POST["departamento"];
+		$nuevoUsuario->codigopostal = $_POST["codigopostal"];
+		if(isset($_POST['recibemail']))
+			$nuevoUsuario->recibemail = true;
+		else 
+			$nuevoUsuario->recibemail = false;
+		$nuevoUsuario->registrarUsuario($nuevoUsuario);
+	}
+?>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"></meta>
+<!DOCTYPE html>
 <html>
-
-		<!-- HEADER : begin -->
-		<?php
-			include('menu.php');
-		?>
-		<!-- HEADER : end -->
-
-		<!-- WRAPPER : begin -->
+		
+		
 		<div id="wrapper">
-
-			<!-- MAIN SLIDER : begin -->
-			<div id="main-slider" class="m-has-hover-stop" data-interval="8000">
-				<div class="slide-list">
-
-					<!-- SLIDE 1 : begin -->
-					<div class="slide slide-1 m-bg-align-right" data-label="Welcome to BEAUTYSPOT" style="background-image: url('./images/slide_01.jpg');">
-						<div class="slide-bg">
-							<div class="container">
-								<div class="slide-inner">
-									<div class="slide-content various-content textalign-left valign-middle">
-
-										<h1>Welcome<br>to BEAUTYSPOT!</h1>
-										<h3>HTML Template for Beauty Salons,<br>Hairdressers, Wellness or Spa</h3>
-
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- SLIDE 1 : end -->
-
-					<!-- SLIDE 2 : begin -->
-					<div class="slide slide-2 m-bg-align-left" data-label="20% off All Massages" style="background-image: url('./images/slide_02.jpg');">
-						<div class="slide-bg">
-							<div class="container">
-								<div class="slide-inner">
-									<div class="slide-content various-content textalign-right valign-middle">
-
-										<h2>20% Off<br>All Massages</h2>
-										<h3>This Friday Only!<br><a href="./ajax/reservation-form.html" class="m-open-ajax-modal">Make a Reservation</a></h3>
-
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- SLIDE 2 : end -->
-
-					<!-- SLIDE 3 : begin -->
-					<div class="slide slide-3 m-bg-align-right" data-label="Eshop Launched" style="background-image: url('./images');">
-						<div class="slide-bg">
-							<div class="container">
-								<div class="slide-inner">
-									<div class="slide-content various-content textalign-left valign-middle">
-
-										<h2>Eshop<br>Launched</h2>
-										<h3><a href="./shop-list.html">Take a Look</a> at Our Products</h3>
-
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- SLIDE 3 : end -->
-
-				</div>
+			<div class="Registro">
+				<form method="post" action="registrar.php">
+					<table>
+						<tr>
+							<td><input type="text" required="" name="nombre" placeholder="Nombre" autocomplete="off"> </td>
+							<td><input type="text" required="" name="apellido" placeholder="Apellido" autocomplete="off"></td>
+							<td><input type="text" id="email"  name="mailusuario" required="" placeholder="Mail" autocomplete="off"> </td>
+							<td><input type="password" name="contraseña" name="password" id="password" required="" placeholder="Contraseña" autocomplete="off"></td>
+						</tr>
+						<tr>
+							<td><input type="text" name="telefono" required="" placeholder="Telefono" autocomplete="off"></td>
+							<td><input type="text" name="celular" required="" placeholder="Celular" autocomplete="off"></td>
+							<td><input type="text" name="dni" required="" placeholder="DNI" autocomplete="off"></td>							
+							<td>
+								<select required="" name="provincia" id="provincia" class="select">
+									<option value="0">Provincia</option>
+									<?										
+									foreach ($provincias as $provincia) {
+									?>
+										<option value="<?=$provincia['ID'];?>"><?=$provincia['Nombre'];?></option>	
+									<?
+									}
+									?>									
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<select required="" name="localidad" id="localidad" class="select">
+									<option value="0">Localidad</option>
+									<?
+									foreach ($localidades as $localidad) {
+									?>
+										<option value="<?=$localidad['ID'];?>"><?=$localidad['Nombre'];?></option>	
+									<?
+									}
+									?>
+								</select>
+							</td>
+							<td><input type="text" name="calle" required="" placeholder="Calle" autocomplete="off"></td>
+							<td><input type="text" name="numero" required="" placeholder="Numero" autocomplete="off"></td>
+							<td><input type="text" name="departamento" required="" placeholder="Departamento" autocomplete="off"></td>
+						</tr>
+						<tr>
+							<td><input type="text" required="" name="codigopostal" placeholder="Cod.Postal" autocomplete="off"> </td>
+							<td  style="text-align: left;" ><label ><input type="checkbox" class="checkbox-element" name="recibemail" />Mails de vennuit</label></td>
+							<td></td><td></td>
+						</tr>
+					</table>
+					<input type="submit" name="Registrate"  value="Registrar" title="Registra tu cuenta"></td>
+					<script src="http://codepen.io/assets/editor/live/css_live_reload_init.js"></script>
+				</form>
 			</div>
-			<!-- MAIN SLIDER : end -->
-
 			<!-- CORE : begin -->
 			<div id="core">
 
@@ -522,3 +541,27 @@
 
 	</body>
 </html>
+<script type="text/javascript">
+	
+	$(document).ready(function () {
+		
+		$('#provincia').change(function (argument) {
+			var _provinciaID = $('#provincia option:selected').val();	
+			$.post("ajax/obtenerLocalidadesPorProvincia.php",
+			{
+				provinciaID:_provinciaID,
+			},
+			function(data,status){
+				$('#localidad').html('');
+				data = JSON.parse(data);
+				for(var i  = 0;i < data.length;i++){
+					var option = '<option value="'+data[i].ID+'">'+data[i].Nombre+'</option>';
+					$('#localidad').append(option);
+				}
+			});
+		  
+		});
+	  
+	});
+	
+</script>
