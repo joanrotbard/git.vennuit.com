@@ -1,6 +1,6 @@
 <?php
-	define (DB_USER, “test”);
-	define (DB_PASSWORD, “test”);
-	define (DB_DATABASE, “test”);
-	define (DB_HOST, “127.0.0.1”);
+	define (DB_USER, “root”);
+	define (DB_PASSWORD, “rednine9”);
+	define (DB_DATABASE, “vennuit”);
+	define (DB_HOST, “localhost”);
 ?>
