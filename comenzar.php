@@ -53,13 +53,7 @@
                                     <h4>1.Elegi lo que va en tu caja:</h4>
 								<div class="row">
 									<div class="col-md-4">
-										<p>Primer dia de ultima indisposicion:</p><input type='text' class="form-control" id='datetimepicker6'/>
-        </div>
-        <script type="text/javascript">
-            $(function () {
-                $('#datetimepicker6').datetimepicker();
-            });
-        </script>
+										<p>Primer dia de ultima indisposicion:</p><div class="calendar"></div>
 								  </div>
 									<div class="col-md-4">
 										<h1>Toallitas</h1>

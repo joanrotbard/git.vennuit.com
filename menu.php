@@ -11,6 +11,9 @@
 	<link href="library/css/bootstrap.min.css" rel="stylesheet">
 	<script src="library/js/bootstrap.min.js"></script>
 	<script src="./library/js/modernizr.custom.min.js" type="text/javascript"></script>
+    <script src="library/js/metro/metro-global.js"></script>
+    <script src="library/js/metro/metro-locale.js"></script>
+    <script src="library/js/metro/metro-calendar.js"></script>
 </head>
 	
 <header id="header" class="m-animated">
