@@ -50,7 +50,7 @@
 									</div>
                                     <br>
 <br><br><br><br>
-                                    <h4>1.Elegi lo que va en tu caja:</h4>
+                                    <h4>2.blah blavch:</h4>
 								<div class="row">
 									<div class="col-md-4">
 										<div class="calendar small" data-role="calendar" data-week-start="1"></div>
