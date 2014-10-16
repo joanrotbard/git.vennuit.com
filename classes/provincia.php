@@ -16,6 +16,7 @@ class Provincia{
 		$result = mysql_query($sql);
 		
 		while($row = mysql_fetch_assoc($result)){
+			 $row["Nombre"] = utf8_encode($row["Nombre"]);
 		     $provincias[] = $row;
 		}
 		return $provincias;

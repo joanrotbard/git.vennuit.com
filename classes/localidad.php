@@ -17,9 +17,9 @@ class Localidad{
 		
 		while($row = mysql_fetch_assoc($result)){
 			 $row["Nombre"] = utf8_encode($row["Nombre"]);
-		     $provincias[] = $row;
+		     $localidades[] = $row;
 		}
-		return $provincias;
+		return $localidades;
     }
 }
 ?>

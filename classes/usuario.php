@@ -25,15 +25,26 @@ class Usuario{
     {
         $this->id=$id;
     }
-
+	public static function existeMail($mail){
+			
+		$sql="SELECT COUNT(*) as Cantidad FROM Cliente WHERE Mail = '".$mail."'";
+		$result = mysql_fetch_assoc(mysql_query($sql));
+		if(intval($result['Cantidad']) > 0)
+			return true;
+		else
+			return false;
+	}
     public function registrarUsuario($usuario) 
     {
-        $sql="INSERT INTO Cliente(Nombre,Apellido,Calle,Numero,Departamento,CodigoPostal,Mail,ProvinciaID,LocalidadID,Telefono,Celular,Contraseña,RecibeMail,Dni) Values ('".$usuario->nombre."','".$usuario->apellido."','".$usuario->calle."',".$usuario->numero.",'".$usuario->departamento."',".$usuario->codigopostal.",'".$usuario->mailusuario."',".$usuario->provinciaid.",".$usuario->localidadid.",'".$usuario->telefono."','".$usuario->celular."','".$usuario->contraseña."',".$usuario->recibemail.",".$usuario->dni.")";
+    	$usuario->contraseña = hash("sha512", $usuario->contraseña);
+		if($usuario->recibemail == true){
+			$usuario->recibemail = 1;
+		}else{
+			$usuario->recibemail = 0;
+		}
+        $sql="INSERT INTO Cliente(Nombre,Apellido,Calle,Numero,Departamento,CodigoPostal,Mail,ProvinciaID,LocalidadID,Telefono,Celular,Password,RecibeMail,Dni) Values ('".$usuario->nombre."','".$usuario->apellido."','".$usuario->calle."',".$usuario->numero.",'".$usuario->departamento."',".$usuario->codigopostal.",'".$usuario->mailusuario."',".$usuario->provinciaid.",".$usuario->localidadid.",'".$usuario->telefono."','".$usuario->celular."','".$usuario->contraseña."',".$usuario->recibemail.",".$usuario->dni.")";
 		$resul = mysql_query($sql);
-		mysql_close($connection);  
-		/*$sql="INSERT INTO Cliente(Nombre,Apellido,Calle,Numero,Departamento,CodigoPostal,Mail,ProvinciaID,LocalidadID,Telefono,Celular,Contraseña,RecibeMail,Dni) Values ('asfaf','fasfsa','14241',414,'1414',141241,'fasfa',3,282,'42142','4124124','ffas',1,12414);";
-		$resul = mysql_query($sql);*/
-		var_dump($resul);die();
+		
     }
 }
 ?>

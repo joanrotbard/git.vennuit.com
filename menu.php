@@ -15,7 +15,8 @@
         <link rel="stylesheet" type="text/css" href="./library/css/skin/default.css">
 		<link rel="stylesheet" type="text/css" href="./library/css/custom.css">
 		<!-- STYLESHEETS : end -->
-
+		<link href="library/css/bootstrap.min.css" rel="stylesheet">
+		<script src="library/js/bootstrap.min.js"></script>
         <!--[if lte IE 8]>
 			<link rel="stylesheet" type="text/css" href="library/css/oldie.css">
 			<script src="library/js/respond.min.js" type="text/javascript"></script>
