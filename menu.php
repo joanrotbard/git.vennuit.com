@@ -31,7 +31,7 @@
 							<button class="header-menu-toggle" type="button"><i class="fa fa-bars"></i>MENU</button>
 							<ul>
 								<li>
-									<span><a href="index.html">Inicio</a></span>
+									<span><a href="index.php">Inicio</a></span>
 								</li>
 								<li>
 									<span><a href="comofunciona.html">Como Funciona</a></span>
