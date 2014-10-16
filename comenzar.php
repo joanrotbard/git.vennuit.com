@@ -8,9 +8,7 @@
 		<!-- HEADER : end -->
 
 		<!-- WRAPPER : begin -->
-		<div class="col-md-6">
-		  <p><em>The Big Oxmox</em> advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
-</div>
+	
 		<div id="wrapper">
 
 			<!-- CORE : begin -->
@@ -59,95 +57,11 @@
 						<!-- BASICS SECTION : end -->
 
 							<!-- LISTS SECTION : begin -->
-							<section>
-								<div class="row">
-									<div class="col-md-6">
-
-										<h2>Unordered List</h2>
-
-										<!-- UNORDERED LIST : begin -->
-										<ul>
-											<li>Far far away, behind the word mountains</li>
-											<li>far from the countries Vokalia and Consonantia</li>
-											<li>there live the blind texts
-												<ul>
-													<li>Far far away, behind the word mountains</li>
-													<li>far from the countries Vokalia and Consonantia</li>
-												</ul>
-											</li>
-											<li>Separated they live in Bookmarksgrove</li>
-										</ul>
-										<!-- UNORDERED LIST : end -->
-
-									</div>
-									<div class="col-md-6">
-
-										<h2>Ordered List</h2>
-
-										<!-- ORDERED LIST : begin -->
-										<ol>
-											<li>Far far away, behind the word mountains</li>
-											<li>far from the countries Vokalia and Consonantia</li>
-											<li>there live the blind texts
-												<ol>
-													<li>Far far away, behind the word mountains</li>
-													<li>far from the countries Vokalia and Consonantia</li>
-												</ol>
-											</li>
-											<li>Separated they live in Bookmarksgrove</li>
-										</ol>
-										<!-- ORDERED LIST : begin -->
-
-									</div>
-								</div>
-					  </section>
+							
 							<!-- LISTS SECTION : end -->
 
 							<!-- TABLE SECTION : begin -->
-							<section>
-
-								<h2>Table</h2>
-
-								<!-- TABLE : begin -->
-								<table>
-									<thead>
-										<tr>
-											<th>Maecenas tempus</th>
-											<th>Condimentum</th>
-											<th>Adipiscing sem</th>
-											<th>Nullam quis ante</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>Sed consequat, leo eget</td>
-											<td>Duis arcu tortor, suscipit eget</td>
-											<td>Phasellus ullamcorper ipsum</td>
-											<td>Curabitur ligula sapien, tincidunt</td>
-										</tr>
-										<tr>
-											<td>Phasellus ullamcorper ipsum</td>
-											<td>Curabitur ligula sapien, tincidunt</td>
-											<td>Sed consequat, leo eget</td>
-											<td>Duis arcu tortor, suscipit eget</td>
-										</tr>
-										<tr>
-											<td>Sed consequat, leo eget</td>
-											<td>Duis arcu tortor, suscipit eget</td>
-											<td>Phasellus ullamcorper ipsum</td>
-											<td>Curabitur ligula sapien, tincidunt</td>
-										</tr>
-										<tr>
-											<td>Phasellus ullamcorper ipsum</td>
-											<td>Curabitur ligula sapien, tincidunt</td>
-											<td>Sed consequat, leo eget</td>
-											<td>Duis arcu tortor, suscipit eget</td>
-										</tr>
-									</tbody>
-								</table>
-								<!-- TABLE : end -->
-
-							</section>
+							
 							<!-- TABLE SECTION : end -->
 
 				  </div>
