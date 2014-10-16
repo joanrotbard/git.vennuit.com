@@ -11,8 +11,6 @@
 	<link href="library/css/bootstrap.min.css" rel="stylesheet">
 	<script src="library/js/bootstrap.min.js"></script>
 	<script src="./library/js/modernizr.custom.min.js" type="text/javascript"></script>
-    <script src="library/js/bootstrap-datetimepicker.*js"></script>
-    <script src="library/js/scripts/moment.min.js"></script>
 </head>
 	
 <header id="header" class="m-animated">
