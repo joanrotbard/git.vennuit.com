@@ -34,6 +34,16 @@ class Usuario{
 		else
 			return false;
 	}
+	public static function tryLogin($mail,$password){
+		
+		$password = hash("sha512", $password);	
+		$sql="SELECT COUNT(*) as Cantidad FROM Cliente WHERE Mail = '".$mail."' AND Password = '".$password."'";
+		$result = mysql_fetch_assoc(mysql_query($sql));
+		if(intval($result['Cantidad']) > 0)
+			return true;
+		else
+			return false;
+	}
     public function registrarUsuario($usuario) 
     {
     	$usuario->contraseña = hash("sha512", $usuario->contraseña);
