@@ -8,7 +8,7 @@
         }
 
         public function open_connection() {
-            $this->connection = mysql_connect(“127.0.0.1”, “root”, “rednine9”);
+            $this->connection = mysql_connect(“thunqr.net”, “root”, “rednine9”);
             if (!$this->connection) {
                 die("Database connection failed: " . mysql_error());
             } else {
