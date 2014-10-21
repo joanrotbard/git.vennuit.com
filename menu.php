@@ -5,12 +5,20 @@
     <link rel="shortcut icon" href="./images/favicon.ico">
 	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700%7cMontserrat:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" type="text/css" href="./library/css/style.css">
+        <link rel="stylesheet" href="library/js/metro-bootstrap.css">
     <link rel="stylesheet" type="text/css" href="./library/css/skin/default.css">
 	<link rel="stylesheet" type="text/css" href="./library/css/custom.css">
 	<script src="library/js/jquery-1.9.1.min.js"></script>
 	<link href="library/css/bootstrap.min.css" rel="stylesheet">
 	<script src="library/js/bootstrap.min.js"></script>
-	<script src="./library/js/modernizr.custom.min.js" type="text/javascript"></script>
+	<script src="./library/js/modernizr.custom.min.js" type="text/javascript"></script> 
+	<script src="library/js/metro/metro.min.js"></script>
+    <script src="library/js/metro/metro-global.js"></script>
+    <script src="library/js/metro/metro-locale.js"></script>
+    <script src="library/js/metro/metro-calendar.js"></script>
+     <script src="library/js/jquery.min.js"></script>
+      <script src="library/js/metro/jquery.widget.min.js"></script>
+      
 </head>
 	
 <header id="header" class="m-animated">
@@ -31,7 +39,7 @@
 							<button class="header-menu-toggle" type="button"><i class="fa fa-bars"></i>MENU</button>
 							<ul>
 								<li>
-									<span><a href="index.html">Inicio</a></span>
+									<span><a href="index.php">Inicio</a></span>
 								</li>
 								<li>
 									<span><a href="comofunciona.html">Como Funciona</a></span>
