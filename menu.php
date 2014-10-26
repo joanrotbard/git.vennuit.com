@@ -17,7 +17,8 @@
     <script src="library/js/metro/metro-locale.js"></script>
     <script src="library/js/metro/metro-calendar.js"></script>
      <script src="library/js/jquery.min.js"></script>
-      <script src="library/js/metro/jquery.widget.min.js"></script>
+	  <script src="library/js/metro/jquery.widget.min.js"></script>
+	  <script src="library/js/jquery.ddslick.js"></script>
       
 </head>
 	
@@ -86,7 +87,7 @@
 
 						<!-- HEADER RESERVATION : begin -->
 						<div class="header-reservation">
-							<a href="./ajax/reservation-form.html" class="c-button m-open-ajax-modal">Comenzar</a>
+							<a href="comenzar.php" class="c-button">Comenzar</a>
 						</div>
 							<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
 							  Login
